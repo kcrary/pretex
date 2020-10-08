@@ -1,0 +1,9 @@
+Group
+        source(-)
+        library($CMLIB/cmlib.cm)
+is
+        custom.sml
+        lexer.cmlex.sml
+        pretex.sml
+
+        $CMLIB/cmlib.cm

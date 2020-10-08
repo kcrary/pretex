@@ -1,0 +1,4 @@
+.cm
+bin/pretex
+bin/pretex-heapimg.x86-win32
+lexer.cmlex.sml

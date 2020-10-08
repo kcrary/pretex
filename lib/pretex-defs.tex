@@ -1,0 +1,21 @@
+
+\makeatletter
+
+\let\ptCodeSpace=\@xobeysp
+\gdef\ptCodeTab{\@xobeysp\@xobeysp\@xobeysp\@xobeysp\@xobeysp\@xobeysp\@xobeysp\@xobeysp}
+\gdef\ptCodeNewline{\par\penalty10000\mbox{}}
+
+\def\ptTilde{\char`~}
+\def\ptBackslash{\char`\\}
+\def\ptLbrace{\char`\{}
+\def\ptRbrace{\char`\}}
+
+%% prevent ?` and !` from being treated as ligatures
+\begingroup
+\catcode``=13
+\gdef\ptNoligs{\def`{{}\char"60}}
+\endgroup
+
+\newenvironment{code}{\list{}{\parsep=0pt\labelwidth=0pt\itemindent=0pt\leftmargin=0pt\listparindent=0pt}\item[]\ttfamily\frenchspacing\catcode``=13\ptNoligs}{\endlist}
+
+\makeatother
