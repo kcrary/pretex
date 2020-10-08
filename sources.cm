@@ -2,7 +2,7 @@ Group
         source(-)
         library($CMLIB/cmlib.cm)
 is
-        ../custom.sml
+        custom.sml
         lexer.cmlex.sml
         action.sml
         pretex.sml
