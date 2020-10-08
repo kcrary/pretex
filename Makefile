@@ -17,5 +17,4 @@ bin/pretex : pretex.sml custom.sml lexer.cmlex.sml make-smlnj.sml
 	bin/mknjexec-win $(SMLNJ) `pwd`/bin pretex-heapimg.x86-win32 pretex
 
 clean :
-	rm custom.sml lexer.cmlex.sml bin/pretex bin/pretex-heapimg.x86-win32
-	rm -r .cm
+	rm -r custom.sml lexer.cmlex.sml bin/pretex bin/pretex-heapimg.x86-win32 .cm
