@@ -18,3 +18,6 @@ bin/pretex : pretex.sml custom.sml lexer.cmlex.sml make-smlnj.sml
 
 clean :
 	rm -r custom.sml lexer.cmlex.sml bin/pretex bin/pretex-heapimg.x86-win32 .cm
+
+installer :
+	cd .. && tar cf pretex/install.tar custom.sml defs.tex document.ptex lexer.cmlex main.tex Makefile
