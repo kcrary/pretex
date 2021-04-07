@@ -36,7 +36,7 @@ structure Translate :> TRANSLATE =
 
       fun writeNewlines l =
          List.app
-            (fn #"\n" => write "\n"
+            (fn #"\n" => write "%\n"
               | _ => ())
             l
       

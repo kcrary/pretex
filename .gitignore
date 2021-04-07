@@ -1,3 +1,5 @@
 .cm
 bin/pretex
 bin/pretex-heapimg.x86-win32
+custom.sml
+lexer.cmlex.sml
