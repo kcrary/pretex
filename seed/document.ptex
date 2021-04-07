@@ -1,0 +1,19 @@
+
+This is a lambda term: $(lam x. x x) (lam x. x x)$.
+
+This is some code:
+
+\begin{code}
+let 
+   val x = y % z
+in
+   {a = x, b = "hello"}
+end
+\end{code}
+
+Goodbye!
+
+A comment to end of line.
+This entire part
+is
+commented out.This isn't.

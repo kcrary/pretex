@@ -5,8 +5,8 @@ Setup directions:
 
 2. Clone pretex as a git submodule in a subdirectory named pretex.
 
-3. Unpack pretex/install.tar into the working directory (not the pretex subdirectory),
-   and edit the resulting files as appropriate.
+3. In the pretex directory, make install.  This will copy seed files into the
+   working directory.  Edit the resulting files as appropriate.
 
 4. Run make to build the document.
 
