@@ -170,6 +170,16 @@ structure Translate :> TRANSLATE =
                )
             
 
+            (* comment mode *)
+
+            fun enter_comment ({self, follow, len, ...}:info) pos =
+               (
+               pushmode (#comment self);
+               continue follow (pos+len)
+               )
+
+
+
             (* custom actions *)
 
             structure Custom =
@@ -222,9 +232,17 @@ structure Translate :> TRANSLATE =
             val (strm', pos) = Lex.text strm 0
          in
             (case front strm' of
-                Nil => ()
+                Nil =>
+                  (case !lexerStack of
+                     [_] => ()
 
-              | Cons _ => error pos "syntax")
+                   | _ :: _ :: _ =>
+                       error pos "unexpected end-of-file"
+
+                   | nil =>
+                       raise (Fail "impossible"))
+
+              | Cons _ => error pos "illegal lexeme")
          end
 
    end

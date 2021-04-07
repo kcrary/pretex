@@ -4,7 +4,8 @@ structure Self =
 
       type 'a self = { text : 'a,
                        code : 'a,
-                       math : 'a }
+                       math : 'a,
+                       comment : 'a }
 
    end
    
